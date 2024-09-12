@@ -1,0 +1,34 @@
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Add this line to allow wrapping to a new line */
+  justify-content: center;
+}
+
+.card-grid > * {
+  width: 350px;
+  margin: 10px;
+}
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-grid > * {
+  width: 350px;
+  margin: 10px;
+}
+/* For larger screens, show more cards */
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* For even larger screens, show even more cards */
+@media (min-width: 1200px) {
+  .card-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
